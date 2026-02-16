@@ -9,8 +9,15 @@ export default async function Home() {
     .eq("game_date", today);
 
   if (error) {
-    return <div>Error loading predictions.</div>;
-  }
+  return (
+    <main style={{ padding: "40px", fontFamily: "Arial, sans-serif" }}>
+      <h1 style={{ fontSize: "32px", marginBottom: "10px" }}>SportsFormulator</h1>
+      <p style={{ color: "#b00" }}>
+        Error loading predictions: {error.message}
+      </p>
+    </main>
+  );
+}
 
   return (
     <main style={{ padding: "40px", fontFamily: "Arial, sans-serif" }}>
