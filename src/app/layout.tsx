@@ -31,8 +31,8 @@ export default function RootLayout({
               alignItems: "center",
               justifyContent: "space-between",
               gap: 16,
-              paddingTop: 16,
-              paddingBottom: 16,
+              paddingTop: 20,
+              paddingBottom: 20,
             }}
           >
             <Link
@@ -42,8 +42,8 @@ export default function RootLayout({
   <Image
   src="/sf-logo.png"
   alt="SportsFormulator"
-  width={320}
-  height={80}
+  width={640}
+  height={160}
   style={{ height: "52px", width: "auto" }}
   priority
 />
@@ -57,19 +57,25 @@ export default function RootLayout({
   >
     SportsFormulator
   </span>
+<Link
+  href="/"
+  style={{
+    display: "flex",
+    alignItems: "center",
+  }}
+>
+  <Image
+    src="/sf-logo.png"
+    alt="SportsFormulator"
+    width={500}
+    height={120}
+    style={{
+      height: "56px",
+      width: "auto",
+    }}
+    priority
+  />
 </Link>
-            <nav style={{ display: "flex", gap: 10, alignItems: "center" }}>
-              <Link
-                href="/"
-                style={{
-                  padding: "8px 12px",
-                  borderRadius: 8,
-                  border: "1px solid rgba(0,0,0,0.08)",
-                  background: "#ffffff",
-                  fontWeight: 600,
-                  color: "#ffffff",
-                }}
-              >
                 Today
               </Link>
 
