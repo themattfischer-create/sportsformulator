@@ -1,4 +1,4 @@
-import { supabase } from "@/lib/supabase";
+import { supabase } from "../lib/supabase";
 
 export default async function Home() {
   const today = new Date().toISOString().split("T")[0];
