@@ -28,6 +28,9 @@ export default async function Home() {
       <h2 style={{ fontSize: "20px", color: "#555" }}>
         Today’s Predicted Scores
       </h2>
+<p style={{ marginTop: 10 }}>
+  <a href="/predictions">View all predictions →</a>
+</p>
 
       <div style={{ marginTop: "30px" }}>
         {data && data.length > 0 ? (
