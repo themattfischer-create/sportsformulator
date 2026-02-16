@@ -40,12 +40,13 @@ export default function RootLayout({
   style={{ display: "flex", alignItems: "center", gap: 10 }}
 >
   <Image
-    src="/sf-icon.png"
-    alt="SF"
-    width={36}
-    height={36}
-    priority
-  />
+  src="/sf-logo.png"
+  alt="SportsFormulator"
+  width={320}
+  height={80}
+  style={{ height: "52px", width: "auto" }}
+  priority
+/>
   <span
     style={{
       fontSize: "22px",
