@@ -41,24 +41,10 @@ export default function RootLayout({
             </Link>
 
             <nav style={{ display: "flex", gap: 16, alignItems: "center" }}>
-              <Link
-                href="/"
-                style={{
-                  color: "#ffffff",
-                  fontWeight: 700,
-                  opacity: 0.95,
-                }}
-              >
+              <Link href="/" style={{ color: "#ffffff", fontWeight: 700, opacity: 0.95 }}>
                 Today
               </Link>
-              <Link
-                href="/predictions"
-                style={{
-                  color: "#ffffff",
-                  fontWeight: 700,
-                  opacity: 0.95,
-                }}
-              >
+              <Link href="/predictions" style={{ color: "#ffffff", fontWeight: 700, opacity: 0.95 }}>
                 Predictions
               </Link>
             </nav>
