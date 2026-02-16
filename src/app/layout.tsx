@@ -19,11 +19,11 @@ export default function RootLayout({
       <body>
         {/* Header */}
         <header
-          style={{
-            background: "#ffffff",
-            borderBottom: "1px solid rgba(0,0,0,0.08)",
-          }}
-        >
+  style={{
+    background: "#216c2a",
+    borderBottom: "1px solid rgba(0,0,0,0.08)",
+  }}
+>
           <div
             className="container"
             style={{
@@ -31,8 +31,8 @@ export default function RootLayout({
               alignItems: "center",
               justifyContent: "space-between",
               gap: 16,
-              paddingTop: 14,
-              paddingBottom: 14,
+              paddingTop: 16,
+              paddingBottom: 16,
             }}
           >
             <Link
@@ -64,7 +64,7 @@ export default function RootLayout({
                   border: "1px solid rgba(0,0,0,0.08)",
                   background: "#ffffff",
                   fontWeight: 600,
-                  color: "#216c2a",
+                  color: "#ffffff",
                 }}
               >
                 Today
