@@ -36,25 +36,27 @@ export default function RootLayout({
             }}
           >
             <Link
-              href="/"
-              style={{ display: "flex", alignItems: "center", gap: 10 }}
-            >
-              <Image
-                src="/sf-icon.png"
-                alt="SportsFormulator"
-                width={34}
-                height={34}
-                priority
-              />
-              <Image
-                src="/sf-logo.png"
-                alt="SportsFormulator"
-                width={220}
-                height={40}
-                priority
-              />
-            </Link>
-
+  href="/"
+  style={{ display: "flex", alignItems: "center", gap: 10 }}
+>
+  <Image
+    src="/sf-icon.png"
+    alt="SF"
+    width={36}
+    height={36}
+    priority
+  />
+  <span
+    style={{
+      fontSize: "22px",
+      fontWeight: 700,
+      color: "#ffffff",
+      letterSpacing: "0.5px",
+    }}
+  >
+    SportsFormulator
+  </span>
+</Link>
             <nav style={{ display: "flex", gap: 10, alignItems: "center" }}>
               <Link
                 href="/"
