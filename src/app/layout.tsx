@@ -17,13 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* Header */}
-        <header
-  style={{
-    background: "#216c2a",
-    borderBottom: "1px solid rgba(0,0,0,0.08)",
-  }}
->
+        <header style={{ background: "#216c2a" }}>
           <div
             className="container"
             style={{
@@ -35,59 +29,34 @@ export default function RootLayout({
               paddingBottom: 20,
             }}
           >
-            <Link
-  href="/"
-  style={{ display: "flex", alignItems: "center", gap: 10 }}
->
-  <Image
-  src="/sf-logo.png"
-  alt="SportsFormulator"
-  width={640}
-  height={160}
-  style={{ height: "52px", width: "auto" }}
-  priority
-/>
-  <span
-    style={{
-      fontSize: "22px",
-      fontWeight: 700,
-      color: "#ffffff",
-      letterSpacing: "0.5px",
-    }}
-  >
-    SportsFormulator
-  </span>
-<Link
-  href="/"
-  style={{
-    display: "flex",
-    alignItems: "center",
-  }}
->
-  <Image
-    src="/sf-logo.png"
-    alt="SportsFormulator"
-    width={500}
-    height={120}
-    style={{
-      height: "56px",
-      width: "auto",
-    }}
-    priority
-  />
-</Link>
+            <Link href="/" style={{ display: "flex", alignItems: "center" }}>
+              <Image
+                src="/sf-logo.png"
+                alt="SportsFormulator"
+                width={500}
+                height={120}
+                style={{ height: "56px", width: "auto" }}
+                priority
+              />
+            </Link>
+
+            <nav style={{ display: "flex", gap: 16, alignItems: "center" }}>
+              <Link
+                href="/"
+                style={{
+                  color: "#ffffff",
+                  fontWeight: 700,
+                  opacity: 0.95,
+                }}
+              >
                 Today
               </Link>
-
               <Link
                 href="/predictions"
                 style={{
-                  padding: "8px 12px",
-                  borderRadius: 8,
-                  border: "1px solid rgba(0,0,0,0.08)",
-                  background: "#ffffff",
-                  fontWeight: 600,
-                  color: "#216c2a",
+                  color: "#ffffff",
+                  fontWeight: 700,
+                  opacity: 0.95,
                 }}
               >
                 Predictions
@@ -96,10 +65,8 @@ export default function RootLayout({
           </div>
         </header>
 
-        {/* Page content */}
         <main className="container">{children}</main>
 
-        {/* Footer */}
         <footer
           style={{
             marginTop: 36,
