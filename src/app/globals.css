@@ -1,10 +1,10 @@
 :root {
   --sf-green: #216c2a;
-  --bg: #0b0f0c;
-  --panel: #101813;
-  --border: rgba(255, 255, 255, 0.10);
-  --text: rgba(255, 255, 255, 0.92);
-  --muted: rgba(255, 255, 255, 0.70);
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --border: rgba(0, 0, 0, 0.08);
+  --text: #111111;
+  --muted: rgba(0, 0, 0, 0.55);
 }
 
 * {
@@ -20,7 +20,7 @@ html, body {
 }
 
 a {
-  color: inherit;
+  color: var(--sf-green);
   text-decoration: none;
 }
 

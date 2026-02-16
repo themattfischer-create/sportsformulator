@@ -1,18 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
+import Link from "next/link";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata = {
+export const metadata: Metadata = {
   title: "SportsFormulator",
   description: "Data-driven sports predictions.",
   icons: {
@@ -22,15 +13,97 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body>
+        {/* Header */}
+        <header
+          style={{
+            background: "#ffffff",
+            borderBottom: "1px solid rgba(0,0,0,0.08)",
+          }}
+        >
+          <div
+            className="container"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: 16,
+              paddingTop: 14,
+              paddingBottom: 14,
+            }}
+          >
+            <Link
+              href="/"
+              style={{ display: "flex", alignItems: "center", gap: 10 }}
+            >
+              <Image
+                src="/sf-icon.png"
+                alt="SportsFormulator"
+                width={34}
+                height={34}
+                priority
+              />
+              <Image
+                src="/sf-logo.png"
+                alt="SportsFormulator"
+                width={220}
+                height={40}
+                priority
+              />
+            </Link>
+
+            <nav style={{ display: "flex", gap: 10, alignItems: "center" }}>
+              <Link
+                href="/"
+                style={{
+                  padding: "8px 12px",
+                  borderRadius: 8,
+                  border: "1px solid rgba(0,0,0,0.08)",
+                  background: "#ffffff",
+                  fontWeight: 600,
+                  color: "#216c2a",
+                }}
+              >
+                Today
+              </Link>
+
+              <Link
+                href="/predictions"
+                style={{
+                  padding: "8px 12px",
+                  borderRadius: 8,
+                  border: "1px solid rgba(0,0,0,0.08)",
+                  background: "#ffffff",
+                  fontWeight: 600,
+                  color: "#216c2a",
+                }}
+              >
+                Predictions
+              </Link>
+            </nav>
+          </div>
+        </header>
+
+        {/* Page content */}
+        <main className="container">{children}</main>
+
+        {/* Footer */}
+        <footer
+          style={{
+            marginTop: 36,
+            padding: "18px 0",
+            borderTop: "1px solid rgba(0,0,0,0.08)",
+            color: "rgba(0,0,0,0.55)",
+            background: "#ffffff",
+          }}
+        >
+          <div className="container" style={{ paddingTop: 0, paddingBottom: 0 }}>
+            © {new Date().getFullYear()} SportsFormulator
+          </div>
+        </footer>
       </body>
     </html>
   );
